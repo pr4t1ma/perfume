@@ -3,6 +3,7 @@
   --white: #fff;
   --background-primary: #ebede9;
   --color-secondary: #2b720d;
+  --color-green: #1d6a14;
   --font-primary: "Montserrat", sans-serif;
   --ml-margin: 30px 0;
 }
@@ -24,12 +25,17 @@ a.button,
 
 h4 {
   color: #a5371f;
-  font-size: 12px;
+  font-size: 0.85rem;
 }
 h2,
 h3 {
   font-size: 1rem;
   margin: 0;
+}
+
+p {
+  font-size: 16px;
+  color: var(--color-green);
 }
 
 .border {
@@ -110,6 +116,7 @@ body {
   align-items: center;
   background-color: var(--background-primary);
 }
+
 .logo {
   margin: 10px 0;
 }
@@ -119,6 +126,13 @@ body {
   line-height: 1.7rem;
   text-align: center;
   margin: 45px 0;
+}
+
+.product-des p {
+  font-size: 16px;
+}
+.product-des .price h1 {
+  margin: 50px 0;
 }
 
 .product-images {
@@ -139,6 +153,7 @@ body {
   flex-basis: 48%;
   gap: 4%;
 }
+
 .product-promo .product-title {
   margin: 15px 0;
   padding: 5px;
@@ -273,4 +288,46 @@ select {
   background: #fff;
   outline: none;
   font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .promo-img-des {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .header ul {
+    display: none;
+  }
+
+  .header:hover {
+    display: block;
+  }
+
+  .product-images {
+    display: block;
+  }
+
+  .main-banner {
+    margin: 30px 0;
+  }
+
+  .story-text p {
+    font-size: 15px;
+  }
+
+  .stocklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-wrapper {
+    display: block;
+  }
+
+  form textarea {
+    max-width: 100%;
+  }
 }
