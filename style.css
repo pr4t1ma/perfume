@@ -107,6 +107,22 @@ body {
   transition: 0.5sec;
   font-weight: bold;
 }
+
+.hamburger,
+.closed {
+  display: none;
+}
+
+.closed {
+  position: absolute;
+  right: 22px;
+  top: 0;
+}
+
+.main-menu:target {
+  display: block;
+}
+
 .container {
   max-width: 1060px;
   margin: 50px auto 0;
@@ -297,11 +313,25 @@ select {
 }
 
 @media (max-width: 500px) {
-  .header ul {
+  .main-menu {
     display: none;
+  }
+  .main-menu ul {
+    display: flex;
+    flex-direction: column;
+    z-index: 997;
+  }
+  .main-menu a {
+    padding: 10px 0;
+    display: block;
   }
 
   .header:hover {
+    display: block;
+  }
+
+  .hamburger,
+  .closed {
     display: block;
   }
 
